@@ -1,0 +1,9 @@
+# OS junk
+.DS_Store
+**/.DS_Store
+
+# Node dependencies (only relevant if local tooling is ever added)
+node_modules/
+
+# Claude Code local settings (machine-specific, not project content)
+.claude/settings.local.json

@@ -1,0 +1,440 @@
+/* =========================================================
+   Ready to Respond — HOSA Community Awareness Campaign
+   Moanalua High School, Oʻahu, Hawaiʻi
+   ---------------------------------------------------------
+   1. Brand colors & fonts
+   2. Reset & base
+   3. Buttons
+   4. Header
+   5. Hero
+   6. Sections (The Problem, Why Hawaiʻi Is Different, Checklist, Take Action)
+   7. Footer
+   8. Scroll-reveal animation
+   9. Responsive
+   ========================================================= */
+
+/* ---------- 1. BRAND COLORS & FONTS ---------- */
+:root {
+  --navy: #0b2545;
+  --navy-dark: #071a33;
+  --navy-deep: #050f1f;
+  --baby-blue: #8ecdf5;
+  --baby-blue-pale: #eaf6ff;
+  --red: #e63946;
+  --red-dark: #c62733;
+  --white: #ffffff;
+  --ink: #10213b;
+  --ink-soft: #4d6079;
+  --bg: #ffffff;
+  --bg-alt: #eaf6ff;
+  --border: #d7e9f7;
+  --radius: 18px;
+  --shadow: 0 14px 34px rgba(11, 37, 69, 0.12);
+  --max-width: 1100px;
+  --font-heading: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* ---------- 2. RESET & BASE ---------- */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  color: var(--navy);
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+
+p { margin: 0 0 1em; }
+
+a { color: inherit; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-alt { background: var(--bg-alt); }
+
+.section-dark {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: var(--white);
+}
+
+.section-dark h2,
+.section-dark .section-heading p { color: var(--white); }
+
+.section-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.section-heading p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin: 10px 0 0;
+}
+
+.text-red { color: var(--red); }
+
+/* ---------- 3. BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-red {
+  background: var(--red);
+  color: var(--white);
+  box-shadow: 0 10px 24px rgba(230, 57, 70, 0.35);
+}
+
+.btn-red:hover { background: var(--red-dark); }
+
+.btn-outline-white {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--white);
+}
+
+.btn-block { width: 100%; }
+
+.btn-small {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- 4. HEADER ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark { font-size: 1.4rem; }
+
+.brand-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+/* ---------- 5. HERO ---------- */
+.hero {
+  background: linear-gradient(170deg, var(--navy) 0%, var(--navy-dark) 65%, var(--navy-deep) 100%);
+  color: var(--white);
+  padding: 96px 0 84px;
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow-badge {
+  display: inline-block;
+  background: rgba(142, 205, 245, 0.16);
+  border: 1px solid rgba(142, 205, 245, 0.4);
+  color: var(--baby-blue);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin-bottom: 26px;
+}
+
+.hero h1 { color: var(--white); margin-bottom: 18px; }
+
+.hero-lead {
+  font-size: 1.2rem;
+  color: #d7e6f7;
+  max-width: 46ch;
+  margin: 0 auto 34px;
+}
+
+.scroll-cue {
+  color: var(--baby-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.scroll-cue:hover { color: var(--white); }
+
+/* ---------- 6. THE PROBLEM ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--navy);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.3rem, 5vw, 3rem);
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  color: var(--white);
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.problem-note {
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- WHY HAWAIʻI IS DIFFERENT ---------- */
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reason-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 26px;
+  box-shadow: 0 10px 26px rgba(11, 37, 69, 0.06);
+}
+
+.reason-icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.reason-card p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+/* ---------- READINESS CHECKLIST ---------- */
+.checklist {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 14px;
+}
+
+.checklist li {
+  position: relative;
+  padding: 14px 20px 14px 58px;
+  background: var(--bg-alt);
+  border-radius: 14px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.checklist li::before {
+  content: "\2713";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.checklist-note {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--baby-blue-pale);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 22px;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* ---------- TAKE ACTION ---------- */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.action-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 32px 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.action-support {
+  color: #cfe0f2;
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+/* ---------- 7. FOOTER ---------- */
+.site-footer {
+  background: var(--navy-deep);
+  color: #aebfd6;
+  text-align: center;
+  padding: 44px 0;
+  font-size: 0.92rem;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.site-footer p { margin: 0 0 6px; }
+
+.footer-fine {
+  color: #8ba0bd;
+  font-size: 0.85rem;
+  max-width: 54ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- 8. SCROLL-REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- 9. RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .reason-grid { grid-template-columns: 1fr; }
+  .action-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 56px 0; }
+  .hero { padding: 72px 0 60px; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .checklist li { padding: 12px 16px 12px 52px; font-size: 0.96rem; }
+  .btn { width: 100%; }
+  .header-inner .btn-small { width: auto; }
+}
