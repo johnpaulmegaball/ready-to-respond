@@ -153,17 +153,17 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
+      <a class="brand" href="index.html">
         <img class="brand-mark" src="images/logo-mark.png" alt="Ready to Respond shield logo">
         <span class="brand-text">Ready to Respond</span>
-      </div>
+      </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main">
         <ul class="nav-links">
           <li><a href="#problem">The Problem</a></li>
           <li><a href="#hazards">Hazards</a></li>
-          <li><a href="#checklist">Build a Kit</a></li>
-          <li><a href="#pass-it-on">Pass It On</a></li>
+          <li><a href="kit.html">Build a Kit</a></li>
+          <li><a href="pass-it-on.html">Pass It On</a></li>
         </ul>
       </nav>
 
@@ -323,175 +323,6 @@
     </div>
   </section>
 
-  <!-- BUILD YOUR 14-DAY KIT -->
-  <section id="checklist" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Build Your 14-Day Kit</h2>
-        <p>Answer a few questions and we&rsquo;ll show you exactly what your household needs. Nothing you enter here leaves your browser.</p>
-      </div>
-
-      <!-- Household calculator -->
-      <div class="kit-calculator">
-        <h3>Your Household</h3>
-        <div class="calc-row">
-          <div class="calc-field">
-            <label for="calcPeople">Number of people in your household</label>
-            <input type="number" id="calcPeople" min="1" max="20" value="4" inputmode="numeric">
-          </div>
-          <div class="calc-field">
-            <label for="calcPets">Number of pets</label>
-            <input type="number" id="calcPets" min="0" max="20" value="0" inputmode="numeric">
-          </div>
-        </div>
-
-        <fieldset class="calc-checks">
-          <legend>Does your household include any of these?</legend>
-          <label class="calc-check"><input type="checkbox" id="needMeds"> Someone takes daily medication</label>
-          <label class="calc-check"><input type="checkbox" id="needPower"> Someone uses a power-dependent medical device (oxygen, CPAP, dialysis, refrigerated insulin)</label>
-          <label class="calc-check"><input type="checkbox" id="needBaby"> Baby or toddler</label>
-          <label class="calc-check"><input type="checkbox" id="needKupuna"> K&#363;puna (older adult)</label>
-          <label class="calc-check"><input type="checkbox" id="needDisability"> Someone with a disability or mobility needs</label>
-        </fieldset>
-
-        <div class="calc-results" id="calcResults" aria-live="polite">
-          <div class="calc-result-main">
-            <span class="calc-result-number" id="calcWaterGallons">56</span>
-            <span class="calc-result-label">gallons of water for 14 days (<span id="calcWaterCases">19</span> cases, about 3 gallons each)</span>
-          </div>
-          <p class="calc-pet-note" id="calcPetNote" hidden>Plus extra water and 14 days of food for your pets.</p>
-          <ul class="calc-extra-items" id="calcExtraItems"></ul>
-        </div>
-      </div>
-
-      <!-- Tiered checklist -->
-      <div class="kit-progress-wrap">
-        <div class="kit-progress-bar"><div class="kit-progress-fill" id="kitProgressFill"></div></div>
-        <p class="kit-progress-label" id="kitProgressLabel" aria-live="polite">0 of 15 done</p>
-      </div>
-
-      <div class="kit-tip">
-        <svg width="20" height="20" aria-hidden="true"><use href="#icon-target"></use></svg>
-        Don&rsquo;t buy it all at once. Add 2&ndash;3 items to each grocery trip.
-      </div>
-
-      <div class="kit-tiers">
-        <div class="kit-tier">
-          <h3>Start This Week</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="alerts"> Sign up for emergency alerts (<a href="https://www.honolulu.gov/dem/hnl-alert/" target="_blank" rel="noopener">HNL Alert</a>)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="med-list"> Write down everyone&rsquo;s medications, doses, and doctors</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="contact"> Choose an out-of-state contact everyone checks in with</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="start-water"> Store some water now (start with a few cases)</label>
-        </div>
-
-        <div class="kit-tier">
-          <h3>This Month</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="water"> 14 days of water (1 gallon per person per day)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="food"> 14 days of nonperishable food + manual can opener</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="radio"> Battery- or solar-powered radio</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="flashlight"> Flashlight + extra batteries</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="firstaid"> First aid kit</label>
-        </div>
-
-        <div class="kit-tier">
-          <h3>Finish Strong</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="meds"> 14 days of prescription medication (talk to your doctor or pharmacist about refills)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="cash"> Extra cash in small bills</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="docs"> Copies of important documents (waterproof bag)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="meetspot"> A family meeting spot if you can&rsquo;t get home</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="plan"> A family emergency plan everyone knows</label>
-        </div>
-      </div>
-
-      <!-- Health & medical needs (HOSA focus) -->
-      <div class="health-needs">
-        <h3>Health Needs Most Kits Forget</h3>
-        <ul class="health-needs-list">
-          <li data-needs-flag="needMeds"><svg width="20" height="20" aria-hidden="true"><use href="#icon-pill"></use></svg> Medication refills, plus a written medication list</li>
-          <li data-needs-flag="needPower"><svg width="20" height="20" aria-hidden="true"><use href="#icon-plug"></use></svg> A backup power plan for medical devices (oxygen, CPAP, dialysis, insulin that needs refrigeration). Tell your doctor and your electric company you rely on power for medical equipment.</li>
-          <li data-needs-flag="needDisability"><svg width="20" height="20" aria-hidden="true"><use href="#icon-user"></use></svg> Eyeglasses, hearing aid batteries, and mobility aids</li>
-          <li data-needs-flag="needBaby"><svg width="20" height="20" aria-hidden="true"><use href="#icon-user"></use></svg> Infant formula, diapers, and baby supplies</li>
-          <li data-needs-flag="needKupuna"><svg width="20" height="20" aria-hidden="true"><use href="#icon-heart-handshake"></use></svg> Supplies for k&#363;puna and people with disabilities</li>
-          <li><svg width="20" height="20" aria-hidden="true"><use href="#icon-check-circle"></use></svg> Basic first aid knowledge, consider taking a CPR / first aid class</li>
-          <li><svg width="20" height="20" aria-hidden="true"><use href="#icon-heart-handshake"></use></svg> Mental health: it&rsquo;s normal to feel stressed after a disaster, check in with family</li>
-        </ul>
-      </div>
-
-      <div class="kit-actions">
-        <button type="button" class="btn btn-outline" id="kitResetBtn">Reset</button>
-        <button type="button" class="btn btn-coral" id="kitPrintBtn" data-track="checklist_print">
-          <svg width="18" height="18" aria-hidden="true"><use href="#icon-printer"></use></svg>
-          Print Checklist
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- PASS IT ON -->
-  <section id="pass-it-on" class="section section-alt">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Check on Your K&#363;puna &mdash; Pass It On</h2>
-        <p>Start with people you already know: grandparents, aunties and uncles, family friends, or a neighbor your family already trusts.</p>
-      </div>
-
-      <div class="pass-it-on-why reveal">
-        <h3>Why It Matters</h3>
-        <p>Most Hawai&#699;i households learn about preparedness from family and friends, not from official channels.<sup class="cite"><a href="#source-3">3</a></sup> About 1 in 4 unprepared households said they simply weren&rsquo;t properly informed.<sup class="cite"><a href="#source-2">2</a></sup> K&#363;puna and people who rely on medical equipment are among those most at risk when supplies or power run out.</p>
-      </div>
-
-      <div class="pass-it-on-steps">
-        <div class="pio-step reveal">
-          <span class="pio-step-number">1</span>
-          <h3>Share It</h3>
-          <p>Send this site to someone you care about.</p>
-          <div class="share-buttons">
-            <button type="button" class="btn btn-coral" id="shareNativeBtn" hidden data-track="share_click" data-track-method="native">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-share"></use></svg>
-              Share
-            </button>
-            <button type="button" class="btn btn-outline" id="shareCopyBtn" data-track="share_click" data-track-method="copy">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-copy"></use></svg>
-              Copy Link
-            </button>
-            <a class="btn btn-outline" id="shareSmsBtn" href="#" data-track="share_click" data-track-method="sms">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-message"></use></svg>
-              Text It
-            </a>
-            <a class="btn btn-outline" id="shareEmailBtn" href="#" data-track="share_click" data-track-method="email">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-mail"></use></svg>
-              Email It
-            </a>
-          </div>
-          <p class="share-copied" id="shareCopiedNote" role="status" hidden>Link copied!</p>
-        </div>
-
-        <div class="pio-step reveal">
-          <span class="pio-step-number">2</span>
-          <h3>Sit Down Together</h3>
-          <p>A few friendly questions to ask:</p>
-          <ul class="conversation-guide">
-            <li>&ldquo;If the power was out for two weeks, do you have enough medicine?&rdquo;</li>
-            <li>&ldquo;Who would you call if you couldn&rsquo;t reach me?&rdquo;</li>
-            <li>&ldquo;Do you need help evacuating?&rdquo;</li>
-            <li>&ldquo;Does any of your medical equipment need electricity?&rdquo;</li>
-            <li>&ldquo;Where would we meet if we got separated?&rdquo;</li>
-          </ul>
-        </div>
-
-        <div class="pio-step reveal">
-          <span class="pio-step-number">3</span>
-          <h3>Fill Out a Card Together</h3>
-          <p>Print a simple check-in card and fill it out side by side.</p>
-          <button type="button" class="btn btn-coral" id="kupunaPrintBtn" data-track="kupuna_card_print">
-            <svg width="18" height="18" aria-hidden="true"><use href="#icon-printer"></use></svg>
-            Print K&#363;puna Card
-          </button>
-          <p class="privacy-note">Keep this card at home. Ready to Respond never collects this information.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- TAKE ACTION -->
   <section class="section section-dark">
@@ -512,13 +343,13 @@
           <span class="action-icon" aria-hidden="true"><svg width="30" height="30"><use href="#icon-backpack"></use></svg></span>
           <span class="action-step">Step 2</span>
           <p class="action-support">Use our calculator and checklist to put together water, food, and supplies for your household.</p>
-          <a href="#checklist" class="btn btn-outline-white btn-block">Build a 14-Day Kit</a>
+          <a href="kit.html" class="btn btn-coral btn-block">Build a 14-Day Kit</a>
         </div>
         <div class="action-card">
           <span class="action-icon" aria-hidden="true"><svg width="30" height="30"><use href="#icon-heart-handshake"></use></svg></span>
           <span class="action-step">Step 3</span>
           <p class="action-support">Share it with a k&#363;puna or family member and fill out a check-in card together.</p>
-          <a href="#pass-it-on" class="btn btn-outline-white btn-block">Pass It On</a>
+          <a href="pass-it-on.html" class="btn btn-coral btn-block">Pass It On</a>
         </div>
       </div>
     </div>
@@ -555,71 +386,9 @@
     </div>
   </footer>
 
-  <!-- ============================================================
-       PRINT-ONLY CONTENT
-       Hidden on screen; shown only inside window.print() by
-       js/kit.js / js/pass-it-on.js setting data-printing on <body>.
-       See the @media print rules in css/style.css.
-       ============================================================ -->
-  <div class="print-only" id="printChecklist">
-    <h1>Ready to Respond &mdash; 14-Day Readiness Checklist</h1>
-    <p class="print-sub">Moanalua High School HOSA &middot; readytorespond site URL goes here</p>
-    <h2>Start This Week</h2>
-    <ul class="print-checklist">
-      <li>&#9633; Sign up for emergency alerts (HNL Alert)</li>
-      <li>&#9633; Write down everyone&rsquo;s medications, doses, and doctors</li>
-      <li>&#9633; Choose an out-of-state contact everyone checks in with</li>
-      <li>&#9633; Store some water now (start with a few cases)</li>
-    </ul>
-    <h2>This Month</h2>
-    <ul class="print-checklist">
-      <li>&#9633; 14 days of water (1 gallon per person per day)</li>
-      <li>&#9633; 14 days of nonperishable food + manual can opener</li>
-      <li>&#9633; Battery- or solar-powered radio</li>
-      <li>&#9633; Flashlight + extra batteries</li>
-      <li>&#9633; First aid kit</li>
-    </ul>
-    <h2>Finish Strong</h2>
-    <ul class="print-checklist">
-      <li>&#9633; 14 days of prescription medication</li>
-      <li>&#9633; Extra cash in small bills</li>
-      <li>&#9633; Copies of important documents (waterproof bag)</li>
-      <li>&#9633; A family meeting spot if you can&rsquo;t get home</li>
-      <li>&#9633; A family emergency plan everyone knows</li>
-    </ul>
-    <h2>Health Needs Most Kits Forget</h2>
-    <ul class="print-checklist">
-      <li>&#9633; Medication refills + written medication list</li>
-      <li>&#9633; Backup power plan for medical devices</li>
-      <li>&#9633; Eyeglasses, hearing aid batteries, mobility aids</li>
-      <li>&#9633; Infant formula, diapers, baby supplies</li>
-      <li>&#9633; Supplies for k&#363;puna and people with disabilities</li>
-    </ul>
-    <div class="print-qr-box">Scan for more: [QR code here]</div>
-  </div>
-
-  <div class="print-only" id="printKupunaCard">
-    <h1>K&#363;puna Check-In Card</h1>
-    <p class="print-sub">Fill this out together &middot; Ready to Respond, Moanalua High School HOSA</p>
-    <table class="print-card-table">
-      <tr><td>Your name &amp; phone</td><td class="print-blank"></td></tr>
-      <tr><td>Their name &amp; phone</td><td class="print-blank"></td></tr>
-      <tr><td>Out-of-state contact</td><td class="print-blank"></td></tr>
-      <tr><td>Family meeting spot</td><td class="print-blank"></td></tr>
-      <tr><td>Needs help evacuating?</td><td>&#9633; Yes &nbsp; &#9633; No</td></tr>
-      <tr><td>Relies on power for medical equipment?</td><td>&#9633; Yes &nbsp; &#9633; No</td></tr>
-      <tr><td>Medication list location</td><td class="print-blank"></td></tr>
-    </table>
-    <p class="print-sub">readytorespond site URL goes here</p>
-    <div class="print-qr-box">[QR code here]</div>
-    <p class="print-privacy">Keep this card at home. Ready to Respond never collects this information.</p>
-  </div>
-
   <script src="js/data.js"></script>
   <script src="js/tracking.js"></script>
   <script src="js/main.js"></script>
   <script src="js/render-data.js"></script>
-  <script src="js/kit.js"></script>
-  <script src="js/pass-it-on.js"></script>
 </body>
 </html>
