@@ -1,6 +1,7 @@
 /* =========================================================
    Ready to Respond — HOSA Community Awareness Campaign
    Moanalua High School, Oʻahu, Hawaiʻi
+   Palette pulled from the campaign logo: ocean teal + hibiscus coral.
    ---------------------------------------------------------
    1. Brand colors & fonts
    2. Reset & base
@@ -15,21 +16,23 @@
 
 /* ---------- 1. BRAND COLORS & FONTS ---------- */
 :root {
-  --navy: #0b2545;
-  --navy-dark: #071a33;
-  --navy-deep: #050f1f;
-  --baby-blue: #8ecdf5;
-  --baby-blue-pale: #eaf6ff;
-  --red: #e63946;
-  --red-dark: #c62733;
+  --teal-deepest: #073a4c;
+  --teal-dark: #0b5c78;
+  --teal: #0f7c9e;
+  --teal-bright: #1fa6c2;
+  --sky: #eaf7fb;
+  --sky-deep: #d8f0f7;
+  --border: #cdeaf2;
+  --coral: #f05448;
+  --coral-dark: #d43e33;
+  --gold: #e8b14a;
   --white: #ffffff;
-  --ink: #10213b;
-  --ink-soft: #4d6079;
+  --ink: #0d2b36;
+  --ink-soft: #4c6773;
   --bg: #ffffff;
-  --bg-alt: #eaf6ff;
-  --border: #d7e9f7;
+  --bg-alt: var(--sky);
   --radius: 18px;
-  --shadow: 0 14px 34px rgba(11, 37, 69, 0.12);
+  --shadow: 0 14px 34px rgba(11, 61, 78, 0.12);
   --max-width: 1100px;
   --font-heading: "Poppins", "Segoe UI", system-ui, sans-serif;
   --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
@@ -59,7 +62,7 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.15;
   margin: 0 0 0.5em;
-  color: var(--navy);
+  color: var(--teal-dark);
 }
 
 h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; }
@@ -83,7 +86,7 @@ a { color: inherit; }
 .section-alt { background: var(--bg-alt); }
 
 .section-dark {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+  background: linear-gradient(160deg, var(--teal-dark) 0%, var(--teal-deepest) 100%);
   color: var(--white);
 }
 
@@ -102,7 +105,7 @@ a { color: inherit; }
   margin: 10px 0 0;
 }
 
-.text-red { color: var(--red); }
+.text-coral { color: var(--coral); }
 
 /* ---------- 3. BUTTONS ---------- */
 .btn {
@@ -123,13 +126,13 @@ a { color: inherit; }
 
 .btn:hover { transform: translateY(-2px); }
 
-.btn-red {
-  background: var(--red);
+.btn-coral {
+  background: var(--coral);
   color: var(--white);
-  box-shadow: 0 10px 24px rgba(230, 57, 70, 0.35);
+  box-shadow: 0 10px 24px rgba(240, 84, 72, 0.35);
 }
 
-.btn-red:hover { background: var(--red-dark); }
+.btn-coral:hover { background: var(--coral-dark); }
 
 .btn-outline-white {
   background: transparent;
@@ -163,8 +166,8 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .brand {
@@ -173,20 +176,24 @@ a { color: inherit; }
   gap: 10px;
 }
 
-.brand-mark { font-size: 1.4rem; }
+.brand-mark {
+  width: 36px;
+  height: auto;
+  display: block;
+}
 
 .brand-text {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.1rem;
-  color: var(--navy);
+  color: var(--teal-dark);
 }
 
 /* ---------- 5. HERO ---------- */
 .hero {
-  background: linear-gradient(170deg, var(--navy) 0%, var(--navy-dark) 65%, var(--navy-deep) 100%);
+  background: linear-gradient(170deg, var(--teal) 0%, var(--teal-dark) 100%);
   color: var(--white);
-  padding: 96px 0 84px;
+  padding: 72px 0 84px;
   text-align: center;
 }
 
@@ -196,11 +203,18 @@ a { color: inherit; }
   align-items: center;
 }
 
+.hero-logo {
+  width: 108px;
+  height: auto;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 10px 20px rgba(7, 58, 76, 0.35));
+}
+
 .eyebrow-badge {
   display: inline-block;
-  background: rgba(142, 205, 245, 0.16);
-  border: 1px solid rgba(142, 205, 245, 0.4);
-  color: var(--baby-blue);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
   font-weight: 600;
   font-size: 0.82rem;
   letter-spacing: 0.02em;
@@ -213,19 +227,20 @@ a { color: inherit; }
 
 .hero-lead {
   font-size: 1.2rem;
-  color: #d7e6f7;
+  color: #e4f4fa;
   max-width: 46ch;
   margin: 0 auto 34px;
 }
 
 .scroll-cue {
-  color: var(--baby-blue);
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  opacity: 0.9;
 }
 
-.scroll-cue:hover { color: var(--white); }
+.scroll-cue:hover { opacity: 1; }
 
 /* ---------- 6. THE PROBLEM ---------- */
 .stat-grid {
@@ -236,7 +251,7 @@ a { color: inherit; }
 }
 
 .stat-card {
-  background: var(--navy);
+  background: var(--teal-deepest);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 36px 28px;
@@ -247,7 +262,7 @@ a { color: inherit; }
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: clamp(2.3rem, 5vw, 3rem);
-  color: var(--red);
+  color: var(--coral);
   line-height: 1;
   margin-bottom: 12px;
 }
@@ -279,7 +294,7 @@ a { color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px 26px;
-  box-shadow: 0 10px 26px rgba(11, 37, 69, 0.06);
+  box-shadow: 0 10px 26px rgba(11, 61, 78, 0.07);
 }
 
 .reason-icon {
@@ -309,7 +324,7 @@ a { color: inherit; }
 .checklist li {
   position: relative;
   padding: 14px 20px 14px 58px;
-  background: var(--bg-alt);
+  background: var(--sky);
   border-radius: 14px;
   font-size: 1.02rem;
   font-weight: 500;
@@ -325,7 +340,7 @@ a { color: inherit; }
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--teal);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -338,11 +353,11 @@ a { color: inherit; }
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background: var(--baby-blue-pale);
+  background: var(--sky-deep);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 22px;
-  color: var(--navy);
+  color: var(--teal-dark);
   font-weight: 600;
   font-size: 0.98rem;
 }
@@ -355,8 +370,8 @@ a { color: inherit; }
 }
 
 .action-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius);
   padding: 32px 26px;
   text-align: center;
@@ -371,7 +386,7 @@ a { color: inherit; }
 }
 
 .action-support {
-  color: #cfe0f2;
+  color: #d3edf5;
   font-size: 0.95rem;
   margin-bottom: 22px;
   flex-grow: 1;
@@ -379,11 +394,17 @@ a { color: inherit; }
 
 /* ---------- 7. FOOTER ---------- */
 .site-footer {
-  background: var(--navy-deep);
-  color: #aebfd6;
+  background: var(--teal-deepest);
+  color: #a9c8d3;
   text-align: center;
   padding: 44px 0;
   font-size: 0.92rem;
+}
+
+.footer-logo {
+  width: 46px;
+  height: auto;
+  margin-bottom: 14px;
 }
 
 .footer-title {
@@ -397,7 +418,7 @@ a { color: inherit; }
 .site-footer p { margin: 0 0 6px; }
 
 .footer-fine {
-  color: #8ba0bd;
+  color: #7fa6b4;
   font-size: 0.85rem;
   max-width: 54ch;
   margin-left: auto;
@@ -432,7 +453,8 @@ a { color: inherit; }
 
 @media (max-width: 640px) {
   .section { padding: 56px 0; }
-  .hero { padding: 72px 0 60px; }
+  .hero { padding: 56px 0 60px; }
+  .hero-logo { width: 88px; }
   .stat-grid { grid-template-columns: 1fr; }
   .checklist li { padding: 12px 16px 12px 52px; font-size: 0.96rem; }
   .btn { width: 100%; }
