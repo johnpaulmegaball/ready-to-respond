@@ -497,42 +497,37 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 .hazard-link:hover { text-decoration: underline; }
 
 .alert-cta {
-  background: var(--teal-dark);
-  color: var(--white);
-  border-radius: var(--radius);
-  padding: 24px 28px;
-  text-align: left;
-}
-
-.alert-cta-main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 18px;
+  background: var(--teal-dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 28px;
+  text-align: left;
 }
 
 .alert-cta-icon { color: var(--gold); flex-shrink: 0; }
 
-.alert-cta-headline { flex: 1 1 320px; min-width: 240px; margin: 0; font-weight: 600; }
+.alert-cta-text { flex: 1 1 320px; min-width: 240px; }
 
-.alert-cta-main .btn { flex-shrink: 0; }
+.alert-cta-headline { margin: 0 0 4px; font-weight: 600; }
 
-/* Its own full-width row (instead of squeezed beside the button) so
-   this sentence has room to sit on one line instead of breaking
-   mid-phrase. */
 .alert-cta-source {
-  margin: 12px 0 0;
-  padding-left: 42px; /* lines up under the headline, past the bell icon */
+  margin: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: #d3edf5;
+  color: #a9cedb;
 }
 
-.alert-cta-source svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-.alert-cta-source strong { color: var(--white); }
+.alert-cta-source svg { color: #a9cedb; flex-shrink: 0; }
+.alert-cta-source strong { color: #d3edf5; }
+
+.alert-cta .btn { flex-shrink: 0; }
 
 /* ---------- 10. BUILD YOUR 14-DAY KIT ---------- */
 .kit-calculator {
@@ -1082,7 +1077,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   .kit-actions .btn,
   .share-buttons .btn,
   .share-buttons a.btn { width: 100%; }
-  .alert-cta-source { padding-left: 0; }
 }
 
 @media (max-width: 420px) {
