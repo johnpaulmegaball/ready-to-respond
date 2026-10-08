@@ -351,22 +351,35 @@ fieldset { border: none; margin: 0; padding: 0; }
   color: var(--ink-soft);
 }
 
-/* Superscript citation links, used throughout the page */
+/* Superscript citation links, used throughout the page.
+   Fixed (not em-relative) font-size so these stay small and discreet
+   next to the giant stat numbers instead of scaling up with them. */
 sup.cite {
-  font-size: 0.6em;
-  margin-left: 1px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  margin-left: 2px;
+  vertical-align: super;
+  line-height: 0;
 }
 
 sup.cite a {
-  color: var(--coral);
+  color: var(--ink-soft);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  opacity: 0.7;
 }
 
-.stat-card sup.cite a { color: var(--gold); }
+.stat-card sup.cite a { color: rgba(255, 255, 255, 0.5); }
 
 sup.cite a:hover,
-sup.cite a:focus-visible { text-decoration: underline; }
+sup.cite a:focus-visible {
+  text-decoration: underline;
+  opacity: 1;
+  color: var(--coral);
+}
+
+.stat-card sup.cite a:hover,
+.stat-card sup.cite a:focus-visible { color: var(--gold); }
 
 sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 
