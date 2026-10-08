@@ -40,8 +40,8 @@ var SOURCES = [
   },
   {
     id: 6,
-    label: "Hawaiʻi Sea Grant, citing HI-EMA — “How Food Secure Are We if Natural Disaster Strikes?” (19 days or longer before Honolulu Harbor could be fully restored)",
-    url: "https://seagrant.soest.hawaii.edu/how-food-secure-are-we-if-natural-disaster-strikes/"
+    label: "State of Hawaiʻi Dept. of Defense — 2018 All-Hazards Preparedness Improvement Action Plan and Report, p.7 (port damage requiring heavy salvage/dredging equipment “will result in the loss of mass importation for 19–30 days”)",
+    url: "https://dod.hawaii.gov/hiema/files/2018/02/Preparedness-Report-18FEB2018.pdf"
   },
   {
     id: 7,
@@ -50,9 +50,8 @@ var SOURCES = [
   },
   {
     id: 8,
-    label: "[SOURCE NEEDED] Stores below 40% of normal stock after 5 days without imports — a teammate mentioned a UH report citing HI-EMA for this, but we could not independently verify an exact source/link. Do not re-add this claim without one.",
-    url: null,
-    needsSource: true
+    label: "State of Hawaiʻi Dept. of Defense — 2018 All-Hazards Preparedness Improvement Action Plan and Report, p.7 (“After five days of no food importation, the market capacity will be below forty percent”)",
+    url: "https://dod.hawaii.gov/hiema/files/2018/02/Preparedness-Report-18FEB2018.pdf"
   },
   {
     id: 9,
