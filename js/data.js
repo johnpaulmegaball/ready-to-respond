@@ -80,59 +80,7 @@ var OFFICIAL_LINKS = {
   wildfire: "https://dod.hawaii.gov/hiema/wildfire/"
 };
 
-// ---- Our Campaign / Our Impact ----
-// Keep campaignGoal as the literal TODO string until the team picks a
-// real, measurable goal. Impact counters should stay `null` (which
-// the page renders as "[TODO]") until there's a real number to show
-// — never fake a number here.
-var CAMPAIGN = {
-  goal: "[TODO: measurable goal, e.g. “Get 500 Oʻahu households to take the quiz by March 2027”]",
-  impact: {
-    quizzesTaken: null,
-    checklistsPrinted: null,
-    cardsShared: null,
-    eventsHeld: null
-  }
-};
-
-// ---- Events ----
-// Add one object per event. Leave fields as "[TODO: ...]" until real
-// details exist. photo should be a path under images/ or null.
-var EVENTS = [
-  {
-    date: "[TODO: event date]",
-    location: "[TODO: event location]",
-    description: "[TODO: short description of the event]",
-    photo: null
-  }
-];
-
 // ---- Partners ----
 // Intentionally empty — do not list an organization here until it is
 // a confirmed real partner of the campaign.
 var PARTNERS = [];
-
-// ---- Our Team ----
-// One object per team member. Leave every field as TODO until real
-// info is supplied.
-var TEAM = [
-  {
-    name: "[TODO: team member name]",
-    role: "[TODO: role, e.g. Campaign Lead]",
-    school: "Moanalua High School",
-    chapter: "HOSA",
-    contact: "[TODO: email or Instagram handle]"
-  }
-];
-
-// ---- Languages ----
-// Structure-only placeholder. Do NOT machine-translate safety content
-// — every entry here should stay marked unavailable until a real,
-// human-reviewed translation exists.
-var LANGUAGES = [
-  { code: "ilo", label: "Ilocano", available: false },
-  { code: "tl", label: "Tagalog", available: false },
-  { code: "vi", label: "Vietnamese", available: false },
-  { code: "chk", label: "Chuukese", available: false },
-  { code: "mh", label: "Marshallese", available: false }
-];
