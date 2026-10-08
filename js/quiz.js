@@ -323,7 +323,12 @@
     function finishQuiz() {
       var score = 0;
       QUESTIONS.forEach(function (q) {
-        if (answers[q.id] === "Yes") score += 1;
+        var answer = answers[q.id];
+        // "Yes" always scores. The neutral option (e.g. "I don't have
+        // gas", "Not applicable") also scores -- it means the risk
+        // this question is checking for doesn't apply to this
+        // household, not that they're unprepared for it.
+        if (answer === "Yes" || (q.neutral && answer === q.neutral)) score += 1;
       });
 
       submitToForm(); // fire-and-forget, never blocks results
