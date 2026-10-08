@@ -317,7 +317,10 @@ fieldset { border: none; margin: 0; padding: 0; }
   margin: 0 auto 34px;
 }
 
+.hero-cta { display: inline-flex; margin-bottom: 22px; }
+
 .scroll-cue {
+  display: block;
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
@@ -904,6 +907,160 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   font-size: 0.95rem;
   margin-bottom: 22px;
   flex-grow: 1;
+}
+
+/* ---------- 13. PREPAREDNESS QUIZ ---------- */
+.quiz-container { max-width: 640px; }
+
+.quiz-card {
+  background: var(--sky);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  margin-bottom: 24px;
+}
+
+/* A <legend> renders outside its <fieldset>'s own background/border
+   by default in every browser, so the fieldset itself must stay
+   borderless and the visual "card" background has to live on a
+   wrapping element instead -- otherwise the question text floats
+   above the card instead of sitting inside it. */
+.quiz-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+
+.quiz-question-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--teal-dark);
+  text-align: center;
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.quiz-option:hover { border-color: var(--teal); }
+
+.quiz-option input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--teal);
+}
+
+.quiz-option:has(input:checked),
+.quiz-option.is-selected {
+  border-color: var(--teal);
+  background: var(--sky);
+}
+
+.quiz-bonus-field { margin-bottom: 22px; }
+.quiz-bonus-field:last-child { margin-bottom: 0; }
+
+.quiz-bonus-field > label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.quiz-zip-input {
+  width: 140px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.quiz-zip-input:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+
+.quiz-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quiz-nav-buttons .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.quiz-score { text-align: center; margin-bottom: 28px; }
+
+.quiz-score-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: var(--coral);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.quiz-score-level {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--teal-dark);
+  margin-bottom: 10px;
+}
+
+.quiz-score-message {
+  color: var(--ink-soft);
+  max-width: 48ch;
+  margin: 0 auto;
+}
+
+.quiz-next-steps { margin-bottom: 28px; }
+
+.quiz-next-steps h3 { text-align: center; margin-bottom: 16px; }
+
+.quiz-step-item {
+  background: var(--sky);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.quiz-step-item a { color: var(--teal-dark); font-weight: 700; }
+
+.quiz-results-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.quiz-retake-note {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
 }
 
 /* ---------- 14. PARTNERS ---------- */

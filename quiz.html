@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparedness Quiz | Ready to Respond</title>
+  <meta name="description" content="Take the 3-minute, anonymous Ready to Respond preparedness quiz and see how close your household is to being 2 Weeks Ready. Moanalua High School HOSA Community Awareness campaign.">
+  <meta property="og:title" content="Preparedness Quiz | Ready to Respond">
+  <meta property="og:description" content="Anonymous. Takes about 3 minutes. See how ready your household really is.">
+  <meta property="og:image" content="images/logo-full.png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vercel Web Analytics. The script 404s harmlessly until Web
+       Analytics is turned on for this project in the Vercel dashboard
+       (Project -> Analytics -> Enable) -- that one switch has to be
+       flipped by a human with access to the Vercel account, it can't
+       be done from code. See js/tracking.js for the custom-event hook
+       this also powers. -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+  <!-- Shared icon set, referenced throughout via <use href="#icon-name">. -->
+  <svg style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6h18"/>
+        <path d="M3 12h18"/>
+        <path d="M3 18h18"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="images/logo-mark.png" alt="Ready to Respond shield logo">
+        <span class="brand-text">Ready to Respond</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html#problem">The Problem</a></li>
+          <li><a href="index.html#hazards">Hazards</a></li>
+          <li><a href="kit.html">Build a Kit</a></li>
+          <li><a href="pass-it-on.html">Pass It On</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="quiz.html" class="btn btn-coral btn-small" data-track="quiz_click" data-track-location="header">Take the Quiz</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+          <svg width="22" height="22"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PREPAREDNESS QUIZ -->
+  <section id="quiz" class="section">
+    <div class="container quiz-container">
+      <div class="section-heading">
+        <h1>Preparedness Quiz</h1>
+        <p>Anonymous. Takes about 3 minutes.</p>
+      </div>
+
+      <div class="kit-progress-wrap" id="quizProgressWrap">
+        <div class="kit-progress-bar"><div class="kit-progress-fill" id="quizProgressFill"></div></div>
+        <p class="kit-progress-label" id="quizProgressLabel">Question 1 of 16</p>
+      </div>
+
+      <form id="quizForm" novalidate>
+        <div id="quizQuestions"></div>
+
+        <div class="quiz-nav-buttons">
+          <button type="button" class="btn btn-outline" id="quizBackBtn" disabled>Back</button>
+          <button type="button" class="btn btn-coral" id="quizNextBtn" disabled>Next</button>
+        </div>
+      </form>
+
+      <div id="quizResults" class="quiz-results" hidden></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <img class="footer-logo" src="images/logo-mark.png" alt="Ready to Respond shield logo">
+      <p class="footer-title">Ready to Respond</p>
+      <p>Moanalua High School &middot; HOSA Community Awareness</p>
+      <p class="footer-fine">This is a student-led campaign. In an emergency, follow official guidance from HI-EMA and local authorities.</p>
+    </div>
+  </footer>
+
+  <script src="js/tracking.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
