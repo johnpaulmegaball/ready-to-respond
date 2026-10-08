@@ -30,31 +30,27 @@ var SOURCES = [
   },
   {
     id: 4,
-    label: "[SOURCE NEEDED] 90% of Hawaiʻi's food is imported, 100% of fuel is imported",
-    url: null,
-    needsSource: true
+    label: "State of Hawaiʻi — Increased Food Security and Food Self-Sufficiency Strategy (about 85–90% of Hawaiʻi's food is imported)",
+    url: "https://files.hawaii.gov/dbedt/op/spb/INCREASED_FOOD_SECURITY_AND_FOOD_SELF_SUFFICIENCY_STRATEGY.pdf"
   },
   {
     id: 5,
-    label: "[SOURCE NEEDED] 5–7 days of food on store shelves statewide",
-    url: null,
-    needsSource: true
+    label: "Hawaiʻi Sea Grant, citing HI-EMA — “How Food Secure Are We if Natural Disaster Strikes?” (commercial food stocks last about 5–7 days)",
+    url: "https://seagrant.soest.hawaii.edu/how-food-secure-are-we-if-natural-disaster-strikes/"
   },
   {
     id: 6,
-    label: "[SOURCE NEEDED] 19–30 days for shipping to fully recover after major port damage",
-    url: null,
-    needsSource: true
+    label: "Hawaiʻi Sea Grant, citing HI-EMA — “How Food Secure Are We if Natural Disaster Strikes?” (19 days or longer before Honolulu Harbor could be fully restored)",
+    url: "https://seagrant.soest.hawaii.edu/how-food-secure-are-we-if-natural-disaster-strikes/"
   },
   {
     id: 7,
-    label: "[SOURCE NEEDED] ~3,000 tons of food and 400 shipping containers land at Honolulu Harbor daily",
-    url: null,
-    needsSource: true
+    label: "Hawaiʻi Sea Grant, citing HI-EMA — “How Food Secure Are We if Natural Disaster Strikes?” (about 3,000 tons of food and 400 shipping containers arrive at Honolulu Harbor daily)",
+    url: "https://seagrant.soest.hawaii.edu/how-food-secure-are-we-if-natural-disaster-strikes/"
   },
   {
     id: 8,
-    label: "[SOURCE NEEDED] Stores below 40% of normal stock after 5 days without imports",
+    label: "[SOURCE NEEDED] Stores below 40% of normal stock after 5 days without imports — a teammate mentioned a UH report citing HI-EMA for this, but we could not independently verify an exact source/link. Do not re-add this claim without one.",
     url: null,
     needsSource: true
   },
@@ -62,6 +58,11 @@ var SOURCES = [
     id: 9,
     label: "Hawaiʻi Emergency Management Agency — 2 Weeks Ready in Hawaiʻi",
     url: "https://dod.hawaii.gov/hiema/2-weeks-ready-in-hawai%ca%bbi/"
+  },
+  {
+    id: 10,
+    label: "Hawaiʻi State Energy Office — Energy Facts & Figures (Hawaiʻi relies on imported fossil fuel for roughly 90% of its energy)",
+    url: "https://energy.hawaii.gov/wp-content/uploads/2020/11/HSEO_FactsAndFigures-2020.pdf"
   }
 ];
 
