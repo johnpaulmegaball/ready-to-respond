@@ -515,6 +515,8 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 
 .hazard-link:hover { text-decoration: underline; }
 
+.hazard-link + .hazard-link { margin-top: 6px; }
+
 .alert-cta {
   display: flex;
   flex-wrap: wrap;
