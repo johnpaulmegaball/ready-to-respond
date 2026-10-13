@@ -1079,6 +1079,20 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   font-weight: 600;
 }
 
+.partners-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.partners-follow svg { color: var(--teal); flex-shrink: 0; }
+.partners-follow a { color: var(--teal-dark); font-weight: 700; text-decoration: none; }
+.partners-follow a:hover { text-decoration: underline; }
+
 /* ---------- 17. SOURCES ---------- */
 .sources-list {
   list-style: none;
