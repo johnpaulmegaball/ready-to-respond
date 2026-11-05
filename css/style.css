@@ -330,6 +330,54 @@ fieldset { border: none; margin: 0; padding: 0; }
 
 .scroll-cue:hover { opacity: 1; }
 
+/* ---------- 5B. THE 3 PILLARS ---------- */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(11, 61, 78, 0.07);
+}
+
+.pillar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: var(--teal);
+  margin-bottom: 18px;
+}
+
+.pillar-icon.is-coral { color: var(--coral); }
+.pillar-icon.is-gold { color: var(--gold-dark); }
+
+.pillar-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+
+.pillar-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.pillar-link {
+  color: var(--teal-dark);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.pillar-link:hover { text-decoration: underline; }
+
 /* ---------- 6. THE PROBLEM / CITATIONS ---------- */
 .stat-grid {
   display: grid;
@@ -1257,6 +1305,7 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 
   .reason-grid { grid-template-columns: 1fr; }
   .action-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr; }
   .kit-tiers { grid-template-columns: 1fr; }
   .pass-it-on-steps { grid-template-columns: 1fr; }
 }
