@@ -1113,32 +1113,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   font-size: 0.88rem;
 }
 
-/* ---------- 13C. WHO WE ARE ---------- */
-/* .team-card reuses .pillar-card / .pillar-icon for the card box and
-   avatar circle so this section matches "The 3 Pillars" exactly. */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 28px;
-}
-
-.about-note {
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: 0.8rem;
-}
-
-/* For a real headshot: <img class="team-photo"> in place of the
-   .pillar-icon placeholder, same 64px circle crop. */
-.team-photo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 18px;
-}
-
 /* ---------- 13B. SUPPORT OUR CAMPAIGN / DONATE ---------- */
 .donate-card {
   display: flex;
@@ -1346,7 +1320,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 @media (max-width: 1024px) {
   .hazard-grid { grid-template-columns: repeat(2, 1fr); }
   .partners-grid { grid-template-columns: repeat(2, 1fr); }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -1399,7 +1372,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   .calc-row { grid-template-columns: 1fr; }
   .hazard-grid { grid-template-columns: 1fr; }
   .partners-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: 1fr; }
   .awareness-callout { flex-direction: column; }
   .kit-actions .btn,
   .share-buttons .btn,
