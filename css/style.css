@@ -1147,6 +1147,29 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   margin-bottom: 22px;
 }
 
+.donate-progress { margin-bottom: 22px; }
+
+.donate-progress-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.donate-progress-fill {
+  height: 100%;
+  min-width: 6px;
+  background: var(--coral);
+  border-radius: 999px;
+}
+
+.donate-progress .donate-progress-label {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
 .donate-qr {
   flex-shrink: 0;
   background: var(--white);
