@@ -93,7 +93,7 @@ var EVENTS = [
   {
     id: "emergency-training",
     title: "Emergency Training",
-    date: "[TODO: event date]",
+    date: null,
     caption: "Together we covered the 3 pillars of preparedness:\n\n" +
       "✅ Be 2 Weeks Ready: build a kit with enough supplies for your household to last 14 days\n" +
       "🤝 Know Your Neighbors: in an emergency, the people next door are your first responders\n" +
