@@ -88,6 +88,7 @@
           <li><a href="index.html#pillars">Our Approach</a></li>
           <li><a href="index.html#problem">The Problem</a></li>
           <li><a href="index.html#hazards">Hazards</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a href="kit.html" class="active">Build a Kit</a></li>
           <li><a href="pass-it-on.html">Pass It On</a></li>
           <li><a href="index.html#donate">Donate</a></li>
@@ -147,7 +148,7 @@
       <!-- Tiered checklist -->
       <div class="kit-progress-wrap">
         <div class="kit-progress-bar"><div class="kit-progress-fill" id="kitProgressFill"></div></div>
-        <p class="kit-progress-label" id="kitProgressLabel" aria-live="polite">0 of 14 done</p>
+        <p class="kit-progress-label" id="kitProgressLabel" aria-live="polite">0 of 18 done</p>
       </div>
 
       <div class="kit-tip">
@@ -157,29 +158,36 @@
 
       <div class="kit-tiers">
         <div class="kit-tier">
-          <h3>Start This Week</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="alerts"> <span>Sign up for emergency alerts<br><a href="https://www.honolulu.gov/dem/hnl-alert/" target="_blank" rel="noopener">HNL Alert</a></span></label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="med-list"> Write down everyone&rsquo;s medications, doses, and doctors</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="contact"> Choose an out-of-state contact everyone checks in with</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="start-water"> Store some water now (start with a few cases)</label>
+          <h3>Be 2 Weeks Ready</h3>
+          <p class="kit-tier-sub">Keep at least 14 days of supplies at home.</p>
+          <label class="kit-item"><input type="checkbox" data-kit-item="water"> <strong>Water:</strong> 1 gallon per person per day (14 gal each)</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="food"> <strong>Food:</strong> 14 days of non-perishables + can opener</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="health"> <strong>Health:</strong> first aid kit + 2-week supply of medications</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="power"> <strong>Power:</strong> flashlights, batteries, NOAA radio, power bank</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="papers"> <strong>Papers:</strong> ID and insurance copies in a waterproof bag, cash</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="gobags"> <strong>Go bags:</strong> one per person, plus pets and the car</label>
         </div>
 
         <div class="kit-tier">
-          <h3>This Month</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="water"> 14 days of water (1 gallon per person per day)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="food"> 14 days of nonperishable food + manual can opener</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="radio"> Battery- or solar-powered radio</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="flashlight"> Flashlight + extra batteries</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="firstaid"> First aid kit</label>
+          <h3>Know Your Neighbors</h3>
+          <p class="kit-tier-sub">Neighbors are often the first responders.</p>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-numbers"> Swap phone numbers with 2&ndash;3 neighbors</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-needs"> Know who nearby may need help: k&#363;puna, keiki, people with disabilities</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-checkin"> Agree on how you&rsquo;ll check on each other after a disaster</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-share"> Share what you have: tools, a generator, medical training</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-meetspot"> Pick a family meeting place and an out-of-area contact</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="neighbor-paper"> Write contacts on paper; texts often go through when calls won&rsquo;t</label>
         </div>
 
         <div class="kit-tier">
-          <h3>Finish Strong</h3>
-          <label class="kit-item"><input type="checkbox" data-kit-item="meds"> 14 days of prescription medication (talk to your doctor or pharmacist about refills)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="cash"> Extra cash in small bills</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="docs"> Copies of important documents (waterproof bag)</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="meetspot"> A family meeting spot if you can&rsquo;t get home</label>
-          <label class="kit-item"><input type="checkbox" data-kit-item="plan"> A family emergency plan everyone knows</label>
+          <h3>Learn Skills</h3>
+          <p class="kit-tier-sub">What you know can save a life.</p>
+          <label class="kit-item"><input type="checkbox" data-kit-item="cpr"> Take a CPR and first aid class</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="alerts"> <span>Sign up for your county&rsquo;s emergency alerts<br><a href="https://www.honolulu.gov/dem/hnl-alert/" target="_blank" rel="noopener">HNL Alert</a></span></label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="tsunami-zone"> Know your tsunami evacuation zone and route</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="sirens"> Know what to do when you hear the warning sirens</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="shutoff"> Learn to shut off your home&rsquo;s water and power</label>
+          <label class="kit-item"><input type="checkbox" data-kit-item="extinguisher"> Practice using a fire extinguisher</label>
         </div>
       </div>
 
@@ -224,31 +232,40 @@
        See the @media print rules in css/style.css.
        ============================================================ -->
   <div class="print-only" id="printChecklist">
-    <h1>Ready to Respond &mdash; 14-Day Readiness Checklist</h1>
+    <h1>Are you Ready to Respond?</h1>
     <p class="print-sub">HOSA Community Awareness &middot; r2rhawaii.org</p>
-    <h2>Start This Week</h2>
+    <p class="print-sub">Hawai&#699;i gets nearly everything by ship, so after a hurricane, tsunami, or wildfire, help may take days or weeks to arrive. Check off each step as you go.</p>
+
+    <h2>1. Be 2 Weeks Ready &mdash; Keep at least 14 days of supplies at home.</h2>
     <ul class="print-checklist">
-      <li>&#9633; Sign up for emergency alerts (HNL Alert)</li>
-      <li>&#9633; Write down everyone&rsquo;s medications, doses, and doctors</li>
-      <li>&#9633; Choose an out-of-state contact everyone checks in with</li>
-      <li>&#9633; Store some water now (start with a few cases)</li>
+      <li>&#9633; Water: 1 gallon per person per day (14 gal each)</li>
+      <li>&#9633; Food: 14 days of non-perishables + can opener</li>
+      <li>&#9633; Health: first aid kit + 2-week supply of medications</li>
+      <li>&#9633; Power: flashlights, batteries, NOAA radio, power bank</li>
+      <li>&#9633; Papers: ID and insurance copies in a waterproof bag, cash</li>
+      <li>&#9633; Go bags: one per person, plus pets and the car</li>
     </ul>
-    <h2>This Month</h2>
+
+    <h2>2. Know Your Neighbors &mdash; Neighbors are often the first responders.</h2>
     <ul class="print-checklist">
-      <li>&#9633; 14 days of water (1 gallon per person per day)</li>
-      <li>&#9633; 14 days of nonperishable food + manual can opener</li>
-      <li>&#9633; Battery- or solar-powered radio</li>
-      <li>&#9633; Flashlight + extra batteries</li>
-      <li>&#9633; First aid kit</li>
+      <li>&#9633; Swap phone numbers with 2&ndash;3 neighbors</li>
+      <li>&#9633; Know who nearby may need help: k&#363;puna, keiki, people with disabilities</li>
+      <li>&#9633; Agree on how you&rsquo;ll check on each other after a disaster</li>
+      <li>&#9633; Share what you have: tools, a generator, medical training</li>
+      <li>&#9633; Pick a family meeting place and an out-of-area contact</li>
+      <li>&#9633; Write contacts on paper; texts often go through when calls won&rsquo;t</li>
     </ul>
-    <h2>Finish Strong</h2>
+
+    <h2>3. Learn Skills &mdash; What you know can save a life.</h2>
     <ul class="print-checklist">
-      <li>&#9633; 14 days of prescription medication</li>
-      <li>&#9633; Extra cash in small bills</li>
-      <li>&#9633; Copies of important documents (waterproof bag)</li>
-      <li>&#9633; A family meeting spot if you can&rsquo;t get home</li>
-      <li>&#9633; A family emergency plan everyone knows</li>
+      <li>&#9633; Take a CPR and first aid class</li>
+      <li>&#9633; Sign up for your county&rsquo;s emergency alerts</li>
+      <li>&#9633; Know your tsunami evacuation zone and route</li>
+      <li>&#9633; Know what to do when you hear the warning sirens</li>
+      <li>&#9633; Learn to shut off your home&rsquo;s water and power</li>
+      <li>&#9633; Practice using a fire extinguisher</li>
     </ul>
+
     <h2>Health Needs Most Kits Forget</h2>
     <ul class="print-checklist">
       <li>&#9633; Medication refills + written medication list</li>
@@ -257,6 +274,22 @@
       <li>&#9633; Infant formula, diapers, baby supplies</li>
       <li>&#9633; Supplies for k&#363;puna and people with disabilities</li>
     </ul>
+
+    <h2>Our &#699;Ohana Plan</h2>
+    <table class="print-card-table">
+      <tr><td>Water needed (people &times; 14 gal)</td><td class="print-blank"></td></tr>
+      <tr><td>Meeting place</td><td class="print-blank"></td></tr>
+      <tr><td>Neighbor to check on</td><td class="print-blank"></td></tr>
+      <tr><td>Out-of-area contact</td><td class="print-blank"></td></tr>
+    </table>
+
+    <p class="print-sub">We reviewed this checklist together as an &#699;ohana.</p>
+    <table class="print-card-table">
+      <tr><td>Student name</td><td class="print-blank"></td></tr>
+      <tr><td>Parent / guardian signature</td><td class="print-blank"></td></tr>
+      <tr><td>Date</td><td class="print-blank"></td></tr>
+    </table>
+
     <div class="print-qr-box">
       <img src="images/qr-r2rhawaii.jpg" alt="QR code to r2rhawaii.org" width="120" height="120">
       Scan for more: r2rhawaii.org

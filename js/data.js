@@ -84,3 +84,45 @@ var OFFICIAL_LINKS = {
 // Intentionally empty — do not list an organization here until it is
 // a confirmed real partner of the campaign.
 var PARTNERS = [];
+
+// ---- Past events ----
+// Each event renders as one Instagram-post-style card with a photo
+// carousel. "date" is left as a TODO string (not invented) until the
+// HOSA team confirms it.
+var EVENTS = [
+  {
+    id: "emergency-training",
+    title: "Emergency Training",
+    date: "[TODO: event date]",
+    caption: "Together we covered the 3 pillars of preparedness:\n\n" +
+      "✅ Be 2 Weeks Ready: build a kit with enough supplies for your household to last 14 days\n" +
+      "🤝 Know Your Neighbors: in an emergency, the people next door are your first responders\n" +
+      "🩹 Learn Skills: hands-on CPR and first aid practice",
+    images: [
+      {
+        src: "images/events/emergency-training-1.jpeg",
+        alt: "HOSA members gather around a table of emergency supplies, including a first aid kit and flashlight, during a demonstration."
+      },
+      {
+        src: "images/events/emergency-training-2.jpeg",
+        alt: "Students practice hands-only CPR on training manikins laid out across desks."
+      },
+      {
+        src: "images/events/emergency-training-3.jpeg",
+        alt: "A small group of HOSA members plan together around a table covered in notes and handouts."
+      },
+      {
+        src: "images/events/emergency-training-4.jpeg",
+        alt: "HOSA members lead a classroom discussion with an emergency-scenario quiz slide shown on the TV behind them."
+      },
+      {
+        src: "images/events/emergency-training-6.jpeg",
+        alt: "Students role-play a CPR scenario on the floor, one practicing chest compressions while another calls for help, as classmates watch."
+      },
+      {
+        src: "images/events/emergency-training-5.jpeg",
+        alt: "Two students read through a Ready to Respond tri-fold brochure together at their desk."
+      }
+    ]
+  }
+];

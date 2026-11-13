@@ -15,7 +15,8 @@
    10. Build Your 14-Day Kit
    11. Pass It On
    12. Take Action
-   13. Our Campaign / Impact / Events
+   13. Preparedness Quiz
+   13b. Past Events
    14. Partners
    15. Team
    16. Languages
@@ -778,7 +779,9 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   box-shadow: 0 10px 26px rgba(11, 61, 78, 0.06);
 }
 
-.kit-tier h3 { margin-bottom: 14px; }
+.kit-tier h3 { margin-bottom: 2px; }
+
+.kit-tier-sub { margin: 0 0 14px; font-size: 0.82rem; color: var(--ink-soft); }
 
 .kit-item {
   display: flex;
@@ -1187,6 +1190,139 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   color: var(--teal-dark);
 }
 
+/* ---------- 13b. PAST EVENTS ---------- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
+  justify-content: center;
+  gap: 32px;
+}
+
+.event-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.event-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+
+.event-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.event-header-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.event-account {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.event-date { font-size: 0.75rem; color: var(--ink-soft); }
+
+.event-carousel {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--sky);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  touch-action: pan-y;
+}
+
+.event-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+
+.event-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.event-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(13, 43, 54, 0.25);
+  transition: background 0.2s ease;
+}
+
+.event-nav:hover { background: var(--white); }
+.event-nav-prev { left: 10px; }
+.event-nav-next { right: 10px; }
+
+.event-counter {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: rgba(13, 43, 54, 0.6);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.event-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.event-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 0 1px rgba(13, 43, 54, 0.2);
+  cursor: pointer;
+}
+
+.event-dot.is-active { background: var(--white); width: 8px; height: 8px; }
+
+.event-card-body { padding: 14px 16px 18px; }
+.event-card-body h3 { margin: 0 0 6px; }
+.event-card-body p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; white-space: pre-line; }
+
 /* ---------- 14. PARTNERS ---------- */
 .partners-grid {
   display: grid;
@@ -1395,6 +1531,7 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   .calc-row { grid-template-columns: 1fr; }
   .hazard-grid { grid-template-columns: 1fr; }
   .partners-grid { grid-template-columns: 1fr; }
+  .events-grid { grid-template-columns: 1fr; }
   .awareness-callout { flex-direction: column; }
   .kit-actions .btn,
   .share-buttons .btn,
