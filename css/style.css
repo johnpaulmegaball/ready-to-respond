@@ -1409,6 +1409,12 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   font-size: 0.92rem;
 }
 
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-logo {
   width: 46px;
   height: auto;
