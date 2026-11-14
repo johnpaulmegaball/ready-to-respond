@@ -84,7 +84,7 @@ var OFFICIAL_LINKS = {
 // Only list an organization here once it is a confirmed real partner
 // of the campaign.
 var PARTNERS = [
-  { name: "Longs Drugs" }
+  { name: "Longs Drugs", logo: "images/partners/longs-drugs.png" }
 ];
 
 // ---- Past events ----

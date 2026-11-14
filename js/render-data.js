@@ -25,7 +25,12 @@ function renderPartners() {
   PARTNERS.forEach(function (p) {
     var card = document.createElement("div");
     card.className = "partner-card";
-    card.textContent = p.name || "[TODO: partner name]";
+    var name = p.name || "[TODO: partner name]";
+    if (p.logo) {
+      card.innerHTML = '<img class="partner-logo" src="' + p.logo + '" alt="' + escapeHtml(name) + ' logo">';
+    } else {
+      card.textContent = name;
+    }
     grid.appendChild(card);
   });
 }

@@ -1331,6 +1331,29 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   margin-bottom: 16px;
 }
 
+.partner-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .partners-empty {
   text-align: center;
   color: var(--ink-soft);
