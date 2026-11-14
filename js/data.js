@@ -81,9 +81,11 @@ var OFFICIAL_LINKS = {
 };
 
 // ---- Partners ----
-// Intentionally empty — do not list an organization here until it is
-// a confirmed real partner of the campaign.
-var PARTNERS = [];
+// Only list an organization here once it is a confirmed real partner
+// of the campaign.
+var PARTNERS = [
+  { name: "Longs Drugs" }
+];
 
 // ---- Past events ----
 // Each event renders as one Instagram-post-style card with a photo
