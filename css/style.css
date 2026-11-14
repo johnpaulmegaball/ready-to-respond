@@ -1326,7 +1326,8 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 /* ---------- 14. PARTNERS ---------- */
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 220px));
+  justify-content: center;
   gap: 20px;
   margin-bottom: 16px;
 }
@@ -1501,7 +1502,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
 /* ---------- 21. RESPONSIVE ---------- */
 @media (max-width: 1024px) {
   .hazard-grid { grid-template-columns: repeat(2, 1fr); }
-  .partners-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -1553,7 +1553,6 @@ sup.cite a + a::before { content: ","; color: inherit; margin-right: 1px; }
   .header-actions .btn-small { width: auto; }
   .calc-row { grid-template-columns: 1fr; }
   .hazard-grid { grid-template-columns: 1fr; }
-  .partners-grid { grid-template-columns: 1fr; }
   .events-grid { grid-template-columns: 1fr; }
   .awareness-callout { flex-direction: column; }
   .kit-actions .btn,
